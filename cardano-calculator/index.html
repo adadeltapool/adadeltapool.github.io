@@ -25,7 +25,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
 
-            <a class="navbar-brand" href=".">Cardano Calculator</a>
+            <a class="navbar-brand" href=".">카르다노 위임 보상 계산기</a>
 
             <button class="navbar-toggler my-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,13 +36,13 @@
                 <ul class="nav nav-pills nav-fill ml-auto" id="pills-tab" role="tablist">
 
                     <li class="nav-item">
-                        <a class="nav-link activate-tab active" id="calculator-tab" data-toggle="tab" href="#calculator" role="tab" aria-controls="calculator" aria-selected="true">Calculator</a>
+                        <a class="nav-link activate-tab active" id="calculator-tab" data-toggle="tab" href="#calculator" role="tab" aria-controls="calculator" aria-selected="true">위임 보상 계산기</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link activate-tab" id="formula-tab" data-toggle="tab" href="#formula" role="tab" aria-controls="formula" aria-selected="false">Formula</a>
+                        <a class="nav-link activate-tab" id="formula-tab" data-toggle="tab" href="#formula" role="tab" aria-controls="formula" aria-selected="false">공식</a>
                     </li>
-
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link activate-tab" id="faq-tab" data-toggle="tab" href="#faq" role="tab" aria-controls="faq" aria-selected="false">FAQ</a>
                     </li>
@@ -54,6 +54,7 @@
                     <li class="nav-item">
                         <a class="nav-link activate-tab" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">About</a>
                     </li>
+                  -->
 
                 </ul>
 
@@ -69,19 +70,12 @@
 
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
 
-                        <strong>Warning!</strong> All following calculations are <b>NOT PRECISE</b>
+                        <strong>경고!</strong> 아래의 위임 보상 계산은 정확하지 않습니다. <b>참고만 하세요!</b>
 
                         <p>
-                            The point of this page is to <b>demonstrate</b> HOW Cardano profits are calculated
-                            and to show how many <b>UNKNOWN VARIABLES</b> are used in the calculation.
-                            Result of this calculator <b>SHOULD NOT</b> be considered a promise or a guarantee
-                            of future profits, and should not be used as a financial advice.
+                          이 페이지의 결과 값은 정확한 값은 아닙니다. 위임하고 어느정도 보상 받을지에 대한 가이드를 주기위한 페이지입니다.
                         </p>
 
-                        <p>
-                            Not a single company associated with the Cardano project (IOHK, Emurgo, Cardano Foundation, etc.)
-                            should be held accountable for the results of this calculator!
-                        </p>
 
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -112,10 +106,10 @@
                                         <div id="layout-switcher" role="group" aria-label="Layout switcher"
                                              class="mb-2 btn-group-sm btn-group-toggle" data-toggle="buttons">
                                             <label class="btn btn-light">
-                                                <input type="radio" name="options" id="layout-switcher-table" layout="TABLE" autocomplete="off"> Table
+                                                <input type="radio" name="options" id="layout-switcher-table" layout="TABLE" autocomplete="off"> 테이블 모드
                                             </label>
                                             <label class="btn btn-light">
-                                                <input type="radio" name="options" id="layout-switcher-swiper" layout="SWIPER" autocomplete="off"> Swiper
+                                                <input type="radio" name="options" id="layout-switcher-swiper" layout="SWIPER" autocomplete="off"> 스위퍼 모드
                                             </label>
                                             <div id="locale-selector-div" style="display: inline;">
                                                 <label for="locale-selector">
