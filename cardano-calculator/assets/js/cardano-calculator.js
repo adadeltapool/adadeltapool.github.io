@@ -124,7 +124,7 @@ function updateCalculations() {
     let rate = window.CardanoCalculatorParams.RATE.value;
     let r = (rate / 100)*(5/365);
     let y = 73;
-    let resul1Year = Math.pow(userStake * (1+r),y);
+    let resul1Year = userStake * Math.pow((1+r),y);
     let resul2Year = Math.pow(resul1Year * (1+r),y);
     let resul3Year = Math.pow(resul2Year * (1+r),y);
     let resul4Year = Math.pow(resul3Year * (1+r),y);
