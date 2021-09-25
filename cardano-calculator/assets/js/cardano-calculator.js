@@ -133,7 +133,7 @@ function updateCalculations() {
     let resul7Year = resul6Year * Math.pow((1+r),y);
     let resul8Year = resul7Year * Math.pow((1+r),y);
     let resul9Year = resul8Year * Math.pow((1+r),y);
-    let resul10Year = resul9Year * Math.pow((1+r),y);
+    let resul10Year = roundToTwo(resul9Year * Math.pow((1+r),y));
 
 
     $('#resul1Year').text(frmt(resul1Year) + ' ADA');
@@ -153,6 +153,10 @@ function updateCalculations() {
     //$('#ctx_resultThisYear').text('(' + frmt((resultThisYear * 100) / userStake, 3) + '%)');
     //$('#resultAtYearEnd').text(frmt(resultAtYearEnd) + ' ADA');
     //$('#ctx_resultAtYearEnd').text('(' + frmt((resultAtYearEnd * 100) / userStake, 3) + '%)');
+}
+
+function roundToTwo(num) {
+    return +(Math.round(num + "e+2")  + "e-2");
 }
 
 function paramUpdate(e, shift = 0, needsFormatting = false) {
