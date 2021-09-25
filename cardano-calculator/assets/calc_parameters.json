@@ -12,7 +12,7 @@
             "params": [
                 {
                     "id": "STAKE",
-                    "title": "ADA",
+                    "title": "위임할 ADA 수량",
                     "tip": "풀에 위임 할 ADA의 수를 입력하세요.",
                     "is_cleave": true,
                     "inp_tip": "전체 위임양 보다는 클수 없습니다.",
@@ -24,7 +24,7 @@
                 },
                 {
                     "id": "RATE",
-                    "title": "이율(%)",
+                    "title": "연간 보상률(%)",
                     "tip": "예상되는 연간 이율을 입력하세요. 기봅값은 평균 이율 5%입니다.",
                     "is_cleave": false,
                     "inp_tip": "100%를 넘을수 없습니다.",
