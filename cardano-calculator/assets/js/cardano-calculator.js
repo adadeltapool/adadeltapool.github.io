@@ -133,7 +133,7 @@ function updateCalculations() {
     let resul7Year = resul6Year * Math.pow((1+r),y);
     let resul8Year = resul7Year * Math.pow((1+r),y);
     let resul9Year = resul8Year * Math.pow((1+r),y);
-    let resul10Year = resul9Year * Math.pow((1+r),y);
+    let resul10Year = (resul9Year * Math.pow((1+r),y)).toFixed(2);
 
 
     $('#resul1Year').text(frmt(resul1Year) + ' ADA');
