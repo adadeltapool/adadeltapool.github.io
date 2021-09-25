@@ -158,16 +158,6 @@ function updateCalculations() {
     $('#resul9Year').text(frmt(roundToTwo(resul9Year)) + ' ADA');
     $('#resul10Year').text(frmt(roundToTwo(resul10Year)) + ' ADA');
 
-    $('#diff1Yada').'('+text(frmt(roundToTwo(diff1Yada)) + ' ADA)');
-    $('#diff2Yada').'('+text(frmt(roundToTwo(diff2Yada)) + ' ADA)');
-    $('#diff3Yada').'('+text(frmt(roundToTwo(diff3Yada)) + ' ADA)');
-    $('#diff4Yada').'('+text(frmt(roundToTwo(diff4Yada)) + ' ADA)');
-    $('#diff5Yada').'('+text(frmt(roundToTwo(diff5Yada)) + ' ADA)');
-    $('#diff6Yada').'('+text(frmt(roundToTwo(diff6Yada)) + ' ADA)');
-    $('#diff7Yada').'('+text(frmt(roundToTwo(diff7Yada)) + ' ADA)');
-    $('#diff8Yada').'('+text(frmt(roundToTwo(diff8Yada)) + ' ADA)');
-    $('#diff9Yada').'('+text(frmt(roundToTwo(diff9Yada)) + ' ADA)');
-    $('#diff10Yada').'('+text(frmt(roundToTwo(diff10Yada)) + ' ADA)');
 
 
     //$('#ctx_resultAtYearStart').text('(' + frmt((resultAtYearStart * 100) / userStake, 3) + '%)');
