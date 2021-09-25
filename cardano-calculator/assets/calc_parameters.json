@@ -12,7 +12,7 @@
             "params": [
                 {
                     "id": "STAKE",
-                    "title": "<b>Your</b> stake (in ADA)",
+                    "title": "ADA",
                     "tip": "풀에 위임 할 ADA의 수를 입력하세요.",
                     "is_cleave": true,
                     "inp_tip": "전체 위임양 보다는 클수 없습니다.",
