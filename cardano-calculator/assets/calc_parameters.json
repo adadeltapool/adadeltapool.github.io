@@ -23,7 +23,7 @@
                     "ctx_tip": "Share of total stake"
                 },
                 {
-                    "id": "YEAR",
+                    "id": "RATE",
                     "title": "이율(%)",
                     "tip": "예상되는 연간 이율을 입력하세요. 기봅값은 평균 이율 5%입니다.",
                     "is_cleave": false,

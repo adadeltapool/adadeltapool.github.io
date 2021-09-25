@@ -116,58 +116,27 @@ function updateCalculations() {
         return;
     }
     let userStake = window.CardanoCalculatorParams.STAKE.value;
-    let totalStake = window.CardanoCalculatorParams.TOTAL_STAKE.value;
-    if (userStake > totalStake) {
-        return (markError('STAKE', 'Stake cannot be greater than TOTAL stake'),
-            markError('TOTAL_STAKE', 'Total stake cannot be less than user stake'));
-    }
-    let year = window.CardanoCalculatorParams.YEAR.value - 2019;
-    let infl = (window.CardanoCalculatorParams.INFL.value / 100);
-    let txEpoch = window.CardanoCalculatorParams.TX_EPOCH.value;
-    let txSize = window.CardanoCalculatorParams.TX_SIZE.value;
-    let tax = (window.CardanoCalculatorParams.TAX.value / 100);
-    let poolFee = (window.CardanoCalculatorParams.POOL_FEE.value / 100);
-    let initialTotalSupply = 31112484646;
-    let initialReserve = 13887515354;
-    let txFeeFixed = 0.155381;
-    let txFeePerByte = 0.000043946;
-    let userShare = userStake / totalStake;
-    let reserveAtYearStart = initialReserve * Math.pow((1 - infl), year);
-    let issuedAtYearStart = initialReserve - reserveAtYearStart;
-    let supplyAtYearStart = initialTotalSupply + issuedAtYearStart;
-    if (totalStake > supplyAtYearStart) {
-        return markError('TOTAL_STAKE', 'Total stake cannot be greater than total supply for this year')
-    }
-    $('#ctx_STAKE').text(frmt(userShare * 100) + '%');
-    $('#ctx_YEAR').text(frmt(supplyAtYearStart, 3) + ' ADA total (' + frmt(reserveAtYearStart, 3) + ' ADA in reserve)');
-    let issuedThisYear = reserveAtYearStart * infl;
-    let supplyInflation = (issuedThisYear * 100) / supplyAtYearStart;
-    $('#ctx_INFL').text(frmt(issuedThisYear, 3) + ' ADA issued (' + frmt(supplyInflation) + '% inflation)');
-    let stakedShare = (totalStake * 100) / supplyAtYearStart;
-    $('#ctx_TOTAL_STAKE').text(frmt(stakedShare) + '%');
-    let tpb = txEpoch / 21600;
-    let tps = tpb / 20;
-    $('#ctx_TX_EPOCH').text(frmt(tps) + ' tps');
-    let txFee = txFeeFixed + (txSize * txFeePerByte);
-    let blockReward = ((issuedThisYear / (73 * 21600)) + (tpb * txFee)) * (1 - tax);
-    $('#ctx_TX_SIZE').text(frmt(txFee) + ' avg fee (' + frmt(blockReward) + ' avg block reward)');
-    let txFeeYearly = txEpoch * 73 * txFee;
-    let untaxedRewardAtYearStart = issuedAtYearStart + (txFeeYearly * year);
-    let untaxedRewardThisYear = issuedThisYear + txFeeYearly;
-    let taxAtYearStart = untaxedRewardAtYearStart * tax;
-    let taxThisYear = untaxedRewardThisYear * tax;
-    $('#ctx_TAX').text(frmt(taxAtYearStart, 3) + ' ADA in treasury (+ ' + frmt(taxThisYear, 3) + ' ADA added this year)');
-    let taxedRewardAtYearStart = untaxedRewardAtYearStart - taxAtYearStart;
-    let taxedRewardThisYear = untaxedRewardThisYear - taxThisYear;
-    let userRewardAtYearStart = taxedRewardAtYearStart * userShare;
-    let userRewardThisYear = taxedRewardThisYear * userShare;
-    let poolFeeAtYearStart = userRewardAtYearStart * poolFee;
-    let poolFeeThisYear = userRewardThisYear * poolFee;
-    $('#ctx_POOL_FEE').text(frmt(poolFeeThisYear) + ' ADA yearly');
-    let resultAtYearStart = userRewardAtYearStart - poolFeeAtYearStart;
-    let resultThisYear = userRewardThisYear - poolFeeThisYear;
-    let resultAtYearEnd = resultAtYearStart + resultThisYear;
-    $('#resultAtYearStart').text(frmt(resultAtYearStart) + ' ADA');
+    //let totalStake = window.CardanoCalculatorParams.TOTAL_STAKE.value;
+    //if (userStake > totalStake) {
+    //      return (markError('STAKE', 'Stake cannot be greater than TOTAL stake'),
+    //        markError('TOTAL_STAKE', 'Total stake cannot be less than user stake'));
+    //}
+    let rate = window.CardanoCalculatorParams.RATE.value;
+    let r = (rate / 100)*(5/365);
+    let y = 73;
+    let resul1Year = Math.pow(userStake * (1+r),y);
+    let resul2Year = Math.pow(resul1Year * (1+r),y);
+    let resul3Year = Math.pow(resul2Year * (1+r),y);
+    let resul4Year = Math.pow(resul3Year * (1+r),y);
+    let resul5Year = Math.pow(resul4Year * (1+r),y);
+    let resul6Year = Math.pow(resul5Year * (1+r),y);
+    let resul7Year = Math.pow(resul6Year * (1+r),y);
+    let resul8Year = Math.pow(resul7Year * (1+r),y);
+    let resul9Year = Math.pow(resul8Year * (1+r),y);
+    let resul10Year = Math.pow(resul9Year * (1+r),y);
+
+
+    $('#resultAtYearStart').text(frmt(resul1Year) + ' ADA');
     $('#ctx_resultAtYearStart').text('(' + frmt((resultAtYearStart * 100) / userStake, 3) + '%)');
     $('#resultThisYear').text(frmt(resultThisYear) + ' ADA');
     $('#ctx_resultThisYear').text('(' + frmt((resultThisYear * 100) / userStake, 3) + '%)');
