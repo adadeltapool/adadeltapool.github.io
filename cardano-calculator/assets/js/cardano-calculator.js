@@ -125,15 +125,15 @@ function updateCalculations() {
     let r = (rate / 100)*(5/365);
     let y = 73;
     let resul1Year = userStake * Math.pow((1+r),y);
-    let resul2Year = Math.pow(resul1Year * (1+r),y);
-    let resul3Year = Math.pow(resul2Year * (1+r),y);
-    let resul4Year = Math.pow(resul3Year * (1+r),y);
-    let resul5Year = Math.pow(resul4Year * (1+r),y);
-    let resul6Year = Math.pow(resul5Year * (1+r),y);
-    let resul7Year = Math.pow(resul6Year * (1+r),y);
-    let resul8Year = Math.pow(resul7Year * (1+r),y);
-    let resul9Year = Math.pow(resul8Year * (1+r),y);
-    let resul10Year = Math.pow(resul9Year * (1+r),y);
+    let resul2Year = resul1Year * Math.pow((1+r),y);
+    let resul3Year = resul2Year * Math.pow((1+r),y);
+    let resul4Year = resul3Year *  Math.pow((1+r),y);
+    let resul5Year = resul4Year *  Math.pow((1+r),y);
+    let resul6Year = resul5Year * Math.pow((1+r),y);
+    let resul7Year = resul6Year * Math.pow((1+r),y);
+    let resul8Year = resul7Year * Math.pow((1+r),y);
+    let resul9Year = resul8Year * Math.pow((1+r),y);
+    let resul10Year = resul9Year * Math.pow((1+r),y);
 
 
     $('#resul1Year').text(frmt(resul1Year) + ' ADA');
