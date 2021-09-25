@@ -126,16 +126,16 @@ function updateCalculations() {
     let y = 73;
     let z= 32000000;
 
-    let resul1Year = (userStake * Math.pow((1+r),y))+((340*(userStake/z))*72);
-    let resul2Year = resul1Year * Math.pow((1+r),y)+((340*(resul1Year/z))*72);
-    let resul3Year = resul2Year * Math.pow((1+r),y)+((340*(resul2Year/z))*72);
-    let resul4Year = resul3Year *  Math.pow((1+r),y)+((340*(resul3Year/z))*72);
-    let resul5Year = resul4Year *  Math.pow((1+r),y)+((340*(resul4Year/z))*72);
-    let resul6Year = resul5Year * Math.pow((1+r),y)+((340*(resul5Year/z))*72);
-    let resul7Year = resul6Year * Math.pow((1+r),y)+((340*(resul6Year/z))*72);
-    let resul8Year = resul7Year * Math.pow((1+r),y)+((340*(resul7Year/z))*72);
-    let resul9Year = resul8Year * Math.pow((1+r),y)+((340*(resul8Year/z))*72);
-    let resul10Year = resul9Year * Math.pow((1+r),y)+((340*(resul9Year/z))*72);
+    let resul1Year = (userStake * Math.pow((1+r),y))-((340*(userStake/z))*72);
+    let resul2Year = resul1Year * Math.pow((1+r),y)-((340*(resul1Year/z))*72);
+    let resul3Year = resul2Year * Math.pow((1+r),y)-((340*(resul2Year/z))*72);
+    let resul4Year = resul3Year *  Math.pow((1+r),y)-((340*(resul3Year/z))*72);
+    let resul5Year = resul4Year *  Math.pow((1+r),y)-((340*(resul4Year/z))*72);
+    let resul6Year = resul5Year * Math.pow((1+r),y)-((340*(resul5Year/z))*72);
+    let resul7Year = resul6Year * Math.pow((1+r),y)-((340*(resul6Year/z))*72);
+    let resul8Year = resul7Year * Math.pow((1+r),y)-((340*(resul7Year/z))*72);
+    let resul9Year = resul8Year * Math.pow((1+r),y)-((340*(resul8Year/z))*72);
+    let resul10Year = resul9Year * Math.pow((1+r),y)-((340*(resul9Year/z))*72);
 
     let diff1Yada = resul1Year - userStake;
     let diff2Yada = resul2Year - resul1Year;
