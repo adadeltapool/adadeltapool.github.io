@@ -135,6 +135,17 @@ function updateCalculations() {
     let resul9Year = resul8Year * Math.pow((1+r),y);
     let resul10Year = resul9Year * Math.pow((1+r),y);
 
+    let diff1Yada = resul1Year - userStake;
+    let diff2Yada = resul2Year - resul1Year;
+    let diff3Yada = resul3Year - resul2Year;
+    let diff4Yada = resul4Year - resul3Year;
+    let diff5Yada = resul5Year - resul4Year;
+    let diff6Yada = resul6Year - resul5Year;
+    let diff7Yada = resul7Year - resul6Year;
+    let diff8Yada = resul8Year - resul7Year;
+    let diff9Yada = resul9Year - resul8Year;
+    let diff10Yada = resul10Year - resul9Year;
+
 
     $('#resul1Year').text(frmt(roundToTwo(resul1Year)) + ' ADA');
     $('#resul2Year').text(frmt(roundToTwo(resul2Year)) + ' ADA');
@@ -146,6 +157,17 @@ function updateCalculations() {
     $('#resul8Year').text(frmt(roundToTwo(resul8Year)) + ' ADA');
     $('#resul9Year').text(frmt(roundToTwo(resul9Year)) + ' ADA');
     $('#resul10Year').text(frmt(roundToTwo(resul10Year)) + ' ADA');
+
+    $('#diff1Yada').text(frmt(roundToTwo(resul1Year)) + ' ADA');
+    $('#diff2Yada').text(frmt(roundToTwo(resul2Year)) + ' ADA');
+    $('#diff3Yada').text(frmt(roundToTwo(resul3Year)) + ' ADA');
+    $('#diff4Yada').text(frmt(roundToTwo(resul4Year)) + ' ADA');
+    $('#diff5Yada').text(frmt(roundToTwo(resul5Year)) + ' ADA');
+    $('#diff6Yada').text(frmt(roundToTwo(resul6Year)) + ' ADA');
+    $('#diff7Yada').text(frmt(roundToTwo(resul7Year)) + ' ADA');
+    $('#diff8Yada').text(frmt(roundToTwo(resul8Year)) + ' ADA');
+    $('#diff9Yada').text(frmt(roundToTwo(resul9Year)) + ' ADA');
+    $('#diff10Yada').text(frmt(roundToTwo(resul10Year)) + ' ADA');
 
 
     //$('#ctx_resultAtYearStart').text('(' + frmt((resultAtYearStart * 100) / userStake, 3) + '%)');
