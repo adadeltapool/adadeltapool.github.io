@@ -136,12 +136,23 @@ function updateCalculations() {
     let resul10Year = Math.pow(resul9Year * (1+r),y);
 
 
-    $('#resultAtYearStart').text(frmt(resul1Year) + ' ADA');
-    $('#ctx_resultAtYearStart').text('(' + frmt((resultAtYearStart * 100) / userStake, 3) + '%)');
-    $('#resultThisYear').text(frmt(resultThisYear) + ' ADA');
-    $('#ctx_resultThisYear').text('(' + frmt((resultThisYear * 100) / userStake, 3) + '%)');
-    $('#resultAtYearEnd').text(frmt(resultAtYearEnd) + ' ADA');
-    $('#ctx_resultAtYearEnd').text('(' + frmt((resultAtYearEnd * 100) / userStake, 3) + '%)');
+    $('#resul1Year').text(frmt(resul1Year) + ' ADA');
+    $('#resul2Year').text(frmt(resul1Year) + ' ADA');
+    $('#resul3Year').text(frmt(resul1Year) + ' ADA');
+    $('#resul4Year').text(frmt(resul1Year) + ' ADA');
+    $('#resul5Year').text(frmt(resul1Year) + ' ADA');
+    $('#resul6Year').text(frmt(resul1Year) + ' ADA');
+    $('#resul7Year').text(frmt(resul1Year) + ' ADA');
+    $('#resul8Year').text(frmt(resul1Year) + ' ADA');
+    $('#resul9Year').text(frmt(resul1Year) + ' ADA');
+    $('#resul10Year').text(frmt(resul1Year) + ' ADA');
+
+
+    //$('#ctx_resultAtYearStart').text('(' + frmt((resultAtYearStart * 100) / userStake, 3) + '%)');
+    //$('#resultThisYear').text(frmt(resultThisYear) + ' ADA');
+    //$('#ctx_resultThisYear').text('(' + frmt((resultThisYear * 100) / userStake, 3) + '%)');
+    //$('#resultAtYearEnd').text(frmt(resultAtYearEnd) + ' ADA');
+    //$('#ctx_resultAtYearEnd').text('(' + frmt((resultAtYearEnd * 100) / userStake, 3) + '%)');
 }
 
 function paramUpdate(e, shift = 0, needsFormatting = false) {
