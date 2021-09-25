@@ -133,19 +133,19 @@ function updateCalculations() {
     let resul7Year = resul6Year * Math.pow((1+r),y);
     let resul8Year = resul7Year * Math.pow((1+r),y);
     let resul9Year = resul8Year * Math.pow((1+r),y);
-    let resul10Year = roundToTwo(resul9Year * Math.pow((1+r),y));
+    let resul10Year = resul9Year * Math.pow((1+r),y);
 
 
-    $('#resul1Year').text(frmt(resul1Year) + ' ADA');
-    $('#resul2Year').text(frmt(resul2Year) + ' ADA');
-    $('#resul3Year').text(frmt(resul3Year) + ' ADA');
-    $('#resul4Year').text(frmt(resul4Year) + ' ADA');
-    $('#resul5Year').text(frmt(resul5Year) + ' ADA');
-    $('#resul6Year').text(frmt(resul6Year) + ' ADA');
-    $('#resul7Year').text(frmt(resul7Year) + ' ADA');
-    $('#resul8Year').text(frmt(resul8Year) + ' ADA');
-    $('#resul9Year').text(frmt(resul9Year) + ' ADA');
-    $('#resul10Year').text(frmt(resul10Year) + ' ADA');
+    $('#resul1Year').text(frmt(roundToTwo(resul1Year)) + ' ADA');
+    $('#resul2Year').text(frmt(roundToTwo(resul2Year)) + ' ADA');
+    $('#resul3Year').text(frmt(roundToTwo(resul3Year)) + ' ADA');
+    $('#resul4Year').text(frmt(roundToTwo(resul4Year)) + ' ADA');
+    $('#resul5Year').text(frmt(roundToTwo(resul5Year)) + ' ADA');
+    $('#resul6Year').text(frmt(roundToTwo(resul6Year)) + ' ADA');
+    $('#resul7Year').text(frmt(roundToTwo(resul7Year)) + ' ADA');
+    $('#resul8Year').text(frmt(roundToTwo(resul8Year)) + ' ADA');
+    $('#resul9Year').text(frmt(roundToTwo(resul9Year)) + ' ADA');
+    $('#resul10Year').text(frmt(roundToTwo(resul10Year)) + ' ADA');
 
 
     //$('#ctx_resultAtYearStart').text('(' + frmt((resultAtYearStart * 100) / userStake, 3) + '%)');
