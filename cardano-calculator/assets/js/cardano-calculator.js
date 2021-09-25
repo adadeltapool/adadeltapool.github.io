@@ -107,9 +107,9 @@ function updateCalculations() {
     let markError = window.CardanoCalculatorLayout.markError;
     let negativeErrors = Object.values(window.CardanoCalculatorParams).map(function(p) {
         if (p.value < p.min) {
-            return markError(p.id, 'Cannot be less than ' + p.min);
+            return markError(p.id, '다음보다 큰수를 넣어주세요. ' + p.min);
         } else if (p.value > p.max) {
-            return markError(p.id, 'Cannot be more than ' + p.max);
+            return markError(p.id, '다음보다 작은 수를 넣어주세요 ' + p.max);
         }
     }).filter((x) => x);
     if (negativeErrors.length > 0) {
